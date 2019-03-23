@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import './Hello.css';
+
 export interface IHelloProps {
     name: string;
     enthusiasmLevel?: number;

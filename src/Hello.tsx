@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import './Hello.css';
+import './components/Hello.css';
 
 interface IHelloProps {
     name: string;

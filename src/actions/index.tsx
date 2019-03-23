@@ -1,11 +1,11 @@
 import * as constants from '../constants';
 
 export interface IIncrementEnthusiasm {
-    type: constants.INCREMENT_ENTHUSIASM;
+    type: constants.INCREMENT_ENTHUSIASM_TYPE;
 }
 
 export interface IDecrementEnthusiasm {
-    type: constants.DECREMENT_ENTHUSIASM;
+    type: constants.DECREMENT_ENTHUSIASM_TYPE;
 }
 
 export type EnthusiasmAction = IIncrementEnthusiasm | IDecrementEnthusiasm;
