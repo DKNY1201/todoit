@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import './Hello.css';
+
 interface IHelloProps {
     name: string;
     enthusiasmLvl?: number;
@@ -11,7 +13,7 @@ interface IHelloState {
 
 class Hello extends React.Component<IHelloProps, IHelloState> {
     state = {
-        currentEnthusiasm: this.props.enthusiasmLvl || 1,
+        currentEnthusiasm: this.props.enthusiasmLvl !== undefined ? this.props.enthusiasmLvl : 1,
     };
 
     constructor(props: IHelloProps) {
@@ -32,7 +34,7 @@ class Hello extends React.Component<IHelloProps, IHelloState> {
 
         return (
             <div className="hello">
-                <h3>Hello {name}{getExclaiminationMarks(currentEnthusiasm)}</h3>
+                <h3 className="greeting">Hello {name}{getExclaiminationMarks(currentEnthusiasm)}</h3>
                 <hr/>
                 <button onClick={this.onDecrement}>-</button>
                 <button onClick={this.onIncrement}>+</button>
