@@ -7,9 +7,7 @@ import todo from "./reducers/todo";
 import App from "./App";
 
 const reducer = combineReducers({todo});
-
 const store = createStore(reducer);
-
 const app = <Provider store={store}>
     <App />
 </Provider>

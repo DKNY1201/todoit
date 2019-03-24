@@ -11,3 +11,6 @@ export interface ITodoState {
     priorities: IPriority[];
 }
 
+export interface IState {
+    todo: ITodoState;
+}

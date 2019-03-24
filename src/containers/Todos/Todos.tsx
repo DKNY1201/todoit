@@ -1,40 +1,46 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
-import {ITodoState} from "../../types/index";
 
-// import classes from './Todos.css';
-// import Todo from '../../components/Todo/Todo';
+import {IState, ITodoState} from "../../types/index";
+import './Todos.css';
 // import AddTodo from '../../components/AddTodo/AddTodo';
+// import Todo from '../../components/Todo/Todo';
 
-class Todos extends React.Component {
-    // state = {
-    //     isAddingTodo: false
-    // };
-    //
-    // render() {
-    //     const {todos, labels, priorities} = this.props;
-    //     const selectedLabel = labels.find(label => label.isSelected);
-    //     const selectedPriority = priorities.find(priority => priority.isSelected);
-    //     const displayName = selectedLabel ? selectedLabel.title : selectedPriority ? selectedPriority.title : '';
-    //
-    //     const todosItem = todos.map(todo => <Todo key={todo.id} />);
-    //
-    //     return (
-    //         <div className={classes.TodosContainer}>
-    //             <h1 className="DisplayName">{displayName}</h1>
-    //             {todosItem}
-    //             <AddTodo />
-    //         </div>
-    //     )
-    // }
+export interface ITodosState {
+    isAddingTodo: boolean;
+}
+
+class Todos extends React.Component<ITodoState, ITodosState> {
+    constructor(props: ITodoState) {
+        super(props);
+        this.state = {
+            isAddingTodo: false
+        };
+    }
+
 
     render() {
-        return <h1>TODOSSS</h1>;
+        // const {todos, labels, priorities} = this.props;
+        // const selectedLabel = labels.find(label => label.isSelected);
+        // const selectedPriority = priorities.find(priority => priority.isSelected);
+        // const displayName = selectedLabel ? selectedLabel.title : selectedPriority ? selectedPriority.title : '';
+
+        // const todosItem = todos.map(todo => <Todo key={todo.id} />);
+
+        return (
+            <div className="todoContainer">
+                {/*<h1 className="displayName">{displayName}</h1>*/}
+                <h1 className="displayName">Hello</h1>
+                {/*{todosItem}*/}
+                {/*<AddTodo />*/}
+            </div>
+        )
     }
 }
 
 
-const mapStateToProps = ({todos, labels, priorities}: ITodoState) => {
+const mapStateToProps = ({todo}: IState) => {
+    const {labels, priorities, todos} = todo;
     return {
         labels,
         priorities,

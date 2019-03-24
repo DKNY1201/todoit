@@ -1,5 +1,5 @@
-import {ITodoState} from "../types/index";
 import {TodoAction} from "../actions/todo";
+import {ITodoState} from "../types/index";
 
 const initState: ITodoState = {
     todos: [
