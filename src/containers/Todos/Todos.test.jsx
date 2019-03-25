@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
 
-import Todos from './Todos';
+import {Todos} from './Todos';
 import Todo from '../../components/Todo/Todo';
 import AddTodo from '../../components/AddTodo/AddTodo';
 
@@ -90,8 +90,7 @@ describe('<Todos />', () => {
 			}
 		];
 
-		wrapper = enzyme.shallow(<Todos />);
-		wrapper.setProps({labels, priorities, todos});
+		wrapper = enzyme.shallow(<Todos labels={labels} priorities={priorities} todos={todos} />);
 		wrapperInstance = wrapper.instance();
 	});
 
@@ -102,36 +101,12 @@ describe('<Todos />', () => {
 	it('should render selected label name', () => {
 		expect(wrapper.find('h1.displayName').text()).toEqual('Work');
 	});
-	//
-	// it('should render selected priority name', () => {
-	// 	const priorities = [
-	// 		{
-	// 			id: 1,
-	// 			title: 'Priority 1',
-	// 			icon: 'flag-red',
-	// 			isSelected: false
-	// 		},
-	// 		{
-	// 			id: 2,
-	// 			title: 'Priority 2',
-	// 			icon: 'flag-orange',
-	// 			isSelected: true
-	// 		}
-	// 	];
-	//
-	// 	wrapper.setProps({priorities});
-	// 	expect(wrapper.find('h1.displayName').text()).toEqual('Priority 2');
-	// });
-	//
-	// it('should render list of Todo component that are not completed and under selected label', () => {
-	// 	expect(wrapper.find(Todo).length).toEqual(2);
-	// });
-	//
-	// it('should render a AddTodo component', () => {
-	// 	expect(wrapper.find(AddTodo).length).toEqual(1);
-	// });
-});
 
-describe('mounted <Todos />', () => {
+	it('should render list of Todo component that are not completed and under selected label', () => {
+		expect(wrapper.find(Todo).length).toEqual(2);
+	});
 
+	it('should render a AddTodo component', () => {
+		expect(wrapper.find(AddTodo).length).toEqual(1);
+	});
 });

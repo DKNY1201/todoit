@@ -10,27 +10,34 @@ export interface ITodosState {
     isAddingTodo: boolean;
 }
 
-class Todos extends React.Component<ITodoState, ITodosState> {
-    constructor(props: ITodoState) {
-        super(props);
-        this.state = {
-            isAddingTodo: false
-        };
-    }
+export class Todos extends React.Component<ITodoState, ITodosState> {
+    state = {
+        isAddingTodo: false
+    };
 
 
     render() {
-        const {todos, labels, priorities} = this.props;
-        const selectedLabel = labels.find(label => label.isSelected);
-        const selectedPriority = priorities.find(priority => priority.isSelected);
-        const displayName = selectedLabel ? selectedLabel.title : selectedPriority ? selectedPriority.title : '';
+        const {todos, labels} = this.props;
+        const defaultLabel = {
+            id: 1,
+            color: '#990000',
+            title: 'Personal',
+            parentLabelId: undefined,
+            isFavorite: false,
+            isSelected: true
+        }
+        const selectedLabel = labels.find(label => label.isSelected) || defaultLabel;
+        const displayName = selectedLabel ? selectedLabel.title : 'N/A';
 
-        const todosItem = todos.map(todo => <Todo key={todo.id} />);
+        const todoItems = todos
+            .filter(todo => !todo.isCompleted)
+            .filter(todo => todo.labelId === selectedLabel.id)
+            .map(todo => <Todo key={todo.id} />);
 
         return (
             <div className="todoContainer">
                 <h1 className="displayName">{displayName}</h1>
-                {todosItem}
+                {todoItems}
                 <AddTodo />
             </div>
         )

@@ -30,7 +30,7 @@ const initState: ITodoState = {
         {
             id: 1,
             color: '#990000',
-            title: 'Personal',
+            title: 'Study',
             parentLabelId: undefined,
             isFavorite: false,
             isSelected: true
@@ -41,25 +41,21 @@ const initState: ITodoState = {
             id: 1,
             title: 'Priority 1',
             icon: 'flag-red',
-            isSelected: false
         },
         {
             id: 2,
             title: 'Priority 2',
             icon: 'flag-orange',
-            isSelected: false
         },
         {
             id: 3,
             title: 'Priority 3',
             icon: 'flag-yellow',
-            isSelected: false
         },
         {
             id: 4,
             title: 'Priority 4',
             icon: 'flag-gray',
-            isSelected: false
         }
     ]
 };
