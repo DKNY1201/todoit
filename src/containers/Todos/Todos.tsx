@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
 
+import AddTodo from '../../components/AddTodo/AddTodo';
+import Todo from '../../components/Todo/Todo';
 import {IState, ITodoState} from "../../types/index";
 import './Todos.css';
-// import AddTodo from '../../components/AddTodo/AddTodo';
-// import Todo from '../../components/Todo/Todo';
 
 export interface ITodosState {
     isAddingTodo: boolean;
@@ -20,19 +20,18 @@ class Todos extends React.Component<ITodoState, ITodosState> {
 
 
     render() {
-        // const {todos, labels, priorities} = this.props;
-        // const selectedLabel = labels.find(label => label.isSelected);
-        // const selectedPriority = priorities.find(priority => priority.isSelected);
-        // const displayName = selectedLabel ? selectedLabel.title : selectedPriority ? selectedPriority.title : '';
+        const {todos, labels, priorities} = this.props;
+        const selectedLabel = labels.find(label => label.isSelected);
+        const selectedPriority = priorities.find(priority => priority.isSelected);
+        const displayName = selectedLabel ? selectedLabel.title : selectedPriority ? selectedPriority.title : '';
 
-        // const todosItem = todos.map(todo => <Todo key={todo.id} />);
+        const todosItem = todos.map(todo => <Todo key={todo.id} />);
 
         return (
             <div className="todoContainer">
-                {/*<h1 className="displayName">{displayName}</h1>*/}
-                <h1 className="displayName">Hello</h1>
-                {/*{todosItem}*/}
-                {/*<AddTodo />*/}
+                <h1 className="displayName">{displayName}</h1>
+                {todosItem}
+                <AddTodo />
             </div>
         )
     }
