@@ -6,22 +6,18 @@ const initState: ITodoState = {
         {
             id: 1,
             title: 'Buy Skateboard',
-            description: 'Target, Home Depot or Walmart',
             time: '03/20/2019',
             labelId: 1,
             priorityId: 2,
-            userId: 1,
             parentTodoId: undefined,
             isCompleted: false
         },
         {
             id: 2,
             title: 'Buy more Skateboard',
-            description: 'Target, Home Depot or Walmart',
             time: '03/20/2019',
             labelId: 1,
             priorityId: 2,
-            userId: 1,
             parentTodoId: undefined,
             isCompleted: false
         }

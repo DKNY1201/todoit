@@ -25,7 +25,7 @@ export class Todos extends React.Component<ITodoState, ITodosState> {
             parentLabelId: undefined,
             isFavorite: false,
             isSelected: true
-        }
+        };
         const selectedLabel = labels.find(label => label.isSelected) || defaultLabel;
         const displayName = selectedLabel ? selectedLabel.title : 'N/A';
 
