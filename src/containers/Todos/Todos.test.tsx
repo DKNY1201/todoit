@@ -99,7 +99,7 @@ describe('<Todos /> rendering', () => {
 	});
 
 	it('should render selected label name', () => {
-		expect(wrapper.find('h1.displayName').text()).toEqual('Work');
+		expect(wrapper.find('.label-title').text()).toEqual('Work');
 	});
 
 	it('should render list of Todo component that are not completed and under selected label', () => {

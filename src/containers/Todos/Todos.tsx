@@ -2,15 +2,15 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 
 import AddTodo from '../../components/AddTodo/AddTodo';
+import {IAppState, ITodoAppState} from "../../model/index";
 import Todo from '../Todo/Todo';
-import {IState, ITodoState} from "../../model/index";
 import './Todos.css';
 
 export interface ITodosState {
     isAddingTodo: boolean;
 }
 
-export class Todos extends React.Component<ITodoState, ITodosState> {
+export class Todos extends React.Component<ITodoAppState, ITodosState> {
     state = {
         isAddingTodo: false
     };
@@ -35,7 +35,7 @@ export class Todos extends React.Component<ITodoState, ITodosState> {
             .map(todo => <Todo key={todo.id} />) : null;
 
         return (
-            <div className="todo-container">
+            <div className="todos-container">
                 <h1 className="label-title">{labelTitle}</h1>
                 {todoItems}
                 <AddTodo />
@@ -44,8 +44,7 @@ export class Todos extends React.Component<ITodoState, ITodosState> {
     }
 }
 
-
-const mapStateToProps = ({todo}: IState) => {
+const mapStateToProps = ({todo}: IAppState) => {
     const {labels, priorities, todos} = todo;
     return {
         labels,

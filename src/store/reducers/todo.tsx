@@ -1,7 +1,7 @@
 import {TodoAction} from "../actions/todo";
-import {ITodoState} from "../../model/index";
+import {ITodoAppState} from "../../model/index";
 
-const initState: ITodoState = {
+const initState: ITodoAppState = {
     todos: [
         {
             id: 1,
@@ -56,7 +56,7 @@ const initState: ITodoState = {
     ]
 };
 
-const todo = (state: ITodoState = initState, action: TodoAction): ITodoState => {
+const todo = (state: ITodoAppState = initState, action: TodoAction): ITodoAppState => {
     return state;
 };
 
