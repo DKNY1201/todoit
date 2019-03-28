@@ -1,6 +1,6 @@
-import * as constants from '../constants';
-import * as types from '../types';
-import {ITodo} from "../types/todo";
+import * as constants from '../../constants';
+import * as types from '../../model';
+import {ITodo} from "../../model/todo";
 
 export interface IAddTodo {
     type: constants.ADD_TODO;

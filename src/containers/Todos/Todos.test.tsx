@@ -2,7 +2,7 @@ import {shallow} from 'enzyme';
 import * as React from 'react';
 
 import AddTodo from '../../components/AddTodo/AddTodo';
-import Todo from '../../components/Todo/Todo';
+import Todo from '../Todo/Todo';
 import {Todos} from './Todos';
 
 describe('<Todos /> rendering', () => {

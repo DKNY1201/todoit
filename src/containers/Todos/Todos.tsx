@@ -2,8 +2,8 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 
 import AddTodo from '../../components/AddTodo/AddTodo';
-import Todo from '../../components/Todo/Todo';
-import {IState, ITodoState} from "../../types/index";
+import Todo from '../Todo/Todo';
+import {IState, ITodoState} from "../../model/index";
 import './Todos.css';
 
 export interface ITodosState {
@@ -26,17 +26,17 @@ export class Todos extends React.Component<ITodoState, ITodosState> {
             isFavorite: false,
             isSelected: true
         };
-        const selectedLabel = labels.find(label => label.isSelected) || defaultLabel;
-        const displayName = selectedLabel ? selectedLabel.title : 'N/A';
+        const selectedLabel = labels.find(label => label.isSelected);
+        const labelTitle = selectedLabel ? selectedLabel.title : 'N/A';
 
-        const todoItems = todos
+        const todoItems = selectedLabel ? todos
             .filter(todo => !todo.isCompleted)
             .filter(todo => todo.labelId === selectedLabel.id)
-            .map(todo => <Todo key={todo.id} />);
+            .map(todo => <Todo key={todo.id} />) : null;
 
         return (
-            <div className="todoContainer">
-                <h1 className="displayName">{displayName}</h1>
+            <div className="todo-container">
+                <h1 className="label-title">{labelTitle}</h1>
                 {todoItems}
                 <AddTodo />
             </div>

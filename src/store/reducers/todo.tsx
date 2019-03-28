@@ -1,11 +1,11 @@
 import {TodoAction} from "../actions/todo";
-import {ITodoState} from "../types/index";
+import {ITodoState} from "../../model/index";
 
 const initState: ITodoState = {
     todos: [
         {
             id: 1,
-            title: 'Buy Skateboard',
+            content: 'Buy Skateboard',
             time: '03/20/2019',
             labelId: 1,
             priorityId: 2,
@@ -14,7 +14,7 @@ const initState: ITodoState = {
         },
         {
             id: 2,
-            title: 'Buy more Skateboard',
+            content: 'Buy more Skateboard',
             time: '03/20/2019',
             labelId: 1,
             priorityId: 2,
