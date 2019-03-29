@@ -11,9 +11,13 @@ describe('<Todo /> rendering', () => {
 	beforeEach(() => {
 		const content = "Default content";
 		const isHovering = false;
-		wrapper = enzyme.shallow(<Todo content={content} />);
+		wrapper = enzyme.shallow<Todo>(<Todo content={content} />);
 		wrapper.setState({isHovering});
 		wrapperInstance = wrapper.instance();
+	});
+
+	it('should render correctly', () => {
+		expect(wrapper).toMatchSnapshot();
 	});
 
 	it('should render a checkbox component', () => {
@@ -29,37 +33,38 @@ describe('<Todo /> rendering', () => {
 	it('shouldn\'t render Drag icon when not hover', () => {
 		const isHovering = false;
 		wrapper.setState({isHovering});
-		expect(wrapper.find('.icon-drag-drop').length).toEqual(0);
+		expect(wrapper.find('Icon[type="drag-drop"]').length).toEqual(0);
 	});
 
 	it('should render Drag icon when hover', () => {
 		const isHovering = true;
 		wrapper.setState({isHovering});
-		expect(wrapper.find('.icon-drag-drop').length).toEqual(1);
+		expect(wrapper.find('Icon[type="drag-drop"]').length).toEqual(1);
 	});
 
 	it('shouldn\'t render Action icon when not hover', () => {
 		const isHovering = false;
 		wrapper.setState({isHovering});
-		expect(wrapper.find('.icon-action').length).toEqual(0);
+		expect(wrapper.find('Icon[type="action"]').length).toEqual(0);
 	});
 
 	it('should render Action icon when hover', () => {
 		const isHovering = true;
 		wrapper.setState({isHovering});
-		expect(wrapper.find('.icon-action').length).toEqual(1);
+		expect(wrapper.find('Icon[type="action"]').length).toEqual(1);
+
 	});
 
 	it('shouldn\'t render Comment icon when not hover', () => {
 		const isHovering = false;
 		wrapper.setState({isHovering});
-		expect(wrapper.find('.icon-comment').length).toEqual(0);
+		expect(wrapper.find('Icon[type="comment"]').length).toEqual(0);
 	});
 
 	it('should render Comment icon when hover', () => {
 		const isHovering = true;
 		wrapper.setState({isHovering});
-		expect(wrapper.find('.icon-comment').length).toEqual(1);
+		expect(wrapper.find('Icon[type="comment"]').length).toEqual(1);
 	});
 
 	it('should render date/time? in Schedule area when schedule is set', () => {
@@ -81,7 +86,7 @@ describe('<Todo /> rendering', () => {
 		const isHovering = true;
 		wrapper.setProps({schedule});
 		wrapper.setState({isHovering});
-		expect(wrapper.find('.todo-schedule').find('.icon-schedule').length).toEqual(1);
+		expect(wrapper.find('.todo-schedule').find('Icon[type="schedule"]').length).toEqual(1);
 	});
 
 	it('shouldn\'t be hovered at beginning', () => {
@@ -95,7 +100,7 @@ describe('<Todo /> events', () => {
 	beforeEach(() => {
 		const content = "Default content";
 		const isHovering = false;
-		wrapper = enzyme.shallow(<Todo content={content} />);
+		wrapper = enzyme.mount(<Todo content={content} />);
 		wrapper.setState({isHovering});
 		wrapperInstance = wrapper.instance();
 	});
@@ -106,16 +111,18 @@ describe('<Todo /> events', () => {
 		expect(spy).toHaveBeenCalledTimes(0);
 		wrapper.simulate('mouseover');
 		expect(spy).toHaveBeenCalledTimes(1);
-		expect(wrapperInstance.state.isHover).toEqual(true);
+		expect(wrapperInstance.state.isHovering).toEqual(true);
 	});
 
 	it('should call toggleIsHover() and change isHover to false when mouse leaved', () => {
+		const isHovering = true;
+		wrapper.setState({isHovering});
 		const spy = jest.spyOn(wrapperInstance, 'toggleIsHover');
 		wrapperInstance.forceUpdate();
 		expect(spy).toHaveBeenCalledTimes(0);
 		wrapper.simulate('mouseleave');
 		expect(spy).toHaveBeenCalledTimes(1);
-		expect(wrapperInstance.state.isHover).toEqual(false);
+		expect(wrapperInstance.state.isHovering).toEqual(false);
 	});
 
 	// it('should call completeTodo() when check the checkbox', () => {
@@ -127,26 +134,32 @@ describe('<Todo /> events', () => {
 	// });
 
 	it('should call showCommentModal() when click on Comment icon', () => {
+		const isHovering = true;
+		wrapper.setState({isHovering});
 		const spy = jest.spyOn(wrapperInstance, 'showCommentModal');
 		wrapperInstance.forceUpdate();
 		expect(spy).toHaveBeenCalledTimes(0);
-		wrapper.find('.todo-comment').simulate('click');
+		wrapper.find('.icon-comment').simulate('click');
 		expect(spy).toHaveBeenCalledTimes(1);
 	});
 
 	it('should call showScheduleModal() when click on Schedule icon', () => {
+		const isHovering = true;
+		wrapper.setState({isHovering});
 		const spy = jest.spyOn(wrapperInstance, 'showScheduleModal');
 		wrapperInstance.forceUpdate();
 		expect(spy).toHaveBeenCalledTimes(0);
-		wrapper.find('.todo-schedule').simulate('click');
+		wrapper.find('.icon-schedule').simulate('click');
 		expect(spy).toHaveBeenCalledTimes(1);
 	});
 
 	it('should call showActionModal() when click on Action icon', () => {
+		const isHovering = true;
+		wrapper.setState({isHovering});
 		const spy = jest.spyOn(wrapperInstance, 'showActionModal');
 		wrapperInstance.forceUpdate();
 		expect(spy).toHaveBeenCalledTimes(0);
-		wrapper.find('.todo-action').simulate('click');
+		wrapper.find('.icon-action').simulate('click');
 		expect(spy).toHaveBeenCalledTimes(1);
 	});
 });

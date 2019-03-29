@@ -1,0 +1,12 @@
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.todo-container .todo-central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

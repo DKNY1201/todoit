@@ -16,23 +16,23 @@ export class Todos extends React.Component<ITodoAppState, ITodosState> {
     };
 
 
-    render() {
+    public render(): React.ReactNode {
         const {todos, labels} = this.props;
-        const defaultLabel = {
-            id: 1,
-            color: '#990000',
-            title: 'Personal',
-            parentLabelId: undefined,
-            isFavorite: false,
-            isSelected: true
-        };
+        // const defaultLabel = {
+        //     id: 1,
+        //     color: '#990000',
+        //     title: 'Personal',
+        //     parentLabelId: undefined,
+        //     isFavorite: false,
+        //     isSelected: true
+        // };
         const selectedLabel = labels.find(label => label.isSelected);
         const labelTitle = selectedLabel ? selectedLabel.title : 'N/A';
 
         const todoItems = selectedLabel ? todos
             .filter(todo => !todo.isCompleted)
             .filter(todo => todo.labelId === selectedLabel.id)
-            .map(todo => <Todo key={todo.id} />) : null;
+            .map(todo => <Todo key={todo.id} content={todo.content} completeTodo={this.completeTodoHandler} />) : null;
 
         return (
             <div className="todos-container">
@@ -41,6 +41,10 @@ export class Todos extends React.Component<ITodoAppState, ITodosState> {
                 <AddTodo />
             </div>
         )
+    }
+
+    private completeTodoHandler = () => {
+        console.log('completeTodoHandler');
     }
 }
 

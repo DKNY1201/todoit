@@ -1,4 +1,4 @@
-import {shallow} from 'enzyme';
+import * as enzyme from 'enzyme';
 import * as React from 'react';
 
 import AddTodo from '../../components/AddTodo/AddTodo';
@@ -6,7 +6,8 @@ import Todo from '../Todo/Todo';
 import {Todos} from './Todos';
 
 describe('<Todos /> rendering', () => {
-	let wrapper, wrapperInstance;
+	let wrapper;
+	let wrapperInstance;
 
 	beforeEach(() => {
 		const labels = [
@@ -90,8 +91,12 @@ describe('<Todos /> rendering', () => {
 			}
 		];
 
-		wrapper = shallow(<Todos labels={labels} priorities={priorities} todos={todos} />);
+		wrapper = enzyme.shallow<Todos>(<Todos labels={labels} priorities={priorities} todos={todos} />);
 		wrapperInstance = wrapper.instance();
+	});
+
+	it('should render correctly', () => {
+		expect(wrapper).toMatchSnapshot();
 	});
 
 	it('should always render display name', () => {

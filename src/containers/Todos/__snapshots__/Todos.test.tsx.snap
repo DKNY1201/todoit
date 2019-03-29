@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Todos /> rendering should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Todos
+    labels={
+        Array [
+            Object {
+              "color": "#990000",
+              "id": 1,
+              "isFavorite": false,
+              "isSelected": false,
+              "parentLabelId": null,
+              "title": "Personal",
+            },
+            Object {
+              "color": "#000000",
+              "id": 2,
+              "isFavorite": false,
+              "isSelected": true,
+              "parentLabelId": null,
+              "title": "Work",
+            },
+          ]
+    }
+    priorities={
+        Array [
+            Object {
+              "icon": "flag-red",
+              "id": 1,
+              "isSelected": false,
+              "title": "Priority 1",
+            },
+            Object {
+              "icon": "flag-orange",
+              "id": 2,
+              "isSelected": false,
+              "title": "Priority 2",
+            },
+          ]
+    }
+    todos={
+        Array [
+            Object {
+              "description": "Target, Home Depot or Walmart",
+              "id": 1,
+              "isCompleted": false,
+              "labelId": 1,
+              "parentTodoId": null,
+              "priorityId": 2,
+              "time": "03/20/2019",
+              "title": "Buy Skateboard",
+              "userId": 1,
+            },
+            Object {
+              "description": "Watch Youtube, find a community",
+              "id": 2,
+              "isCompleted": false,
+              "labelId": 2,
+              "parentTodoId": null,
+              "priorityId": 2,
+              "time": "05/16/2019",
+              "title": "Learn to Skateboard",
+              "userId": 1,
+            },
+            Object {
+              "description": "Follow the course on jscomplete.com",
+              "id": 3,
+              "isCompleted": false,
+              "labelId": 2,
+              "parentTodoId": null,
+              "priorityId": 3,
+              "time": "07/15/2019",
+              "title": "Learn GraphQL",
+              "userId": 1,
+            },
+            Object {
+              "description": "Follow the course on jscomplete.com 1",
+              "id": 4,
+              "isCompleted": true,
+              "labelId": 2,
+              "parentTodoId": null,
+              "priorityId": 3,
+              "time": "07/15/2019",
+              "title": "Learn GraphQL 1",
+              "userId": 1,
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="label-title"
+>
+          Work
+</h1>,
+        Array [
+          <Todo
+            completeTodo={[Function]}
+            content={undefined}
+/>,
+          <Todo
+            completeTodo={[Function]}
+            content={undefined}
+/>,
+        ],
+        <AddTodo />,
+      ],
+      "className": "todos-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Work",
+          "className": "label-title",
+        },
+        "ref": null,
+        "rendered": "Work",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "class",
+        "props": Object {
+          "completeTodo": [Function],
+          "content": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "3",
+        "nodeType": "class",
+        "props": Object {
+          "completeTodo": [Function],
+          "content": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="label-title"
+>
+            Work
+</h1>,
+          Array [
+            <Todo
+              completeTodo={[Function]}
+              content={undefined}
+/>,
+            <Todo
+              completeTodo={[Function]}
+              content={undefined}
+/>,
+          ],
+          <AddTodo />,
+        ],
+        "className": "todos-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Work",
+            "className": "label-title",
+          },
+          "ref": null,
+          "rendered": "Work",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "class",
+          "props": Object {
+            "completeTodo": [Function],
+            "content": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "class",
+          "props": Object {
+            "completeTodo": [Function],
+            "content": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
