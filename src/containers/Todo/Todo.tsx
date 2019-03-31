@@ -19,12 +19,13 @@ class Todo extends React.Component<ITodoProp, ITodoState> {
 		isHovering: false
 	}
 
+
 	public render(): React.ReactNode {
 		const {isHovering} = this.state;
 		const {completeTodo, content, schedule} = this.props;
 
 		return (
-			<div className="todo-container" onMouseOver={this.toggleIsHover} onMouseLeave={this.toggleIsHover}>
+			<div className="todo-container" onMouseEnter={this.toggleIsHover} onMouseLeave={this.toggleIsHover}>
 				{ isHovering && <Icon type="drag-drop" /> }
 				<div className="todo-central">
 					<Checkbox clicked={completeTodo} />
@@ -63,5 +64,11 @@ class Todo extends React.Component<ITodoProp, ITodoState> {
 		})
 	}
 }
+
+// Todo.propTypes = {
+// 	completeTodo: PropTypes.func.isRequired,
+// 	content: PropTypes.string.isRequired,
+// 	schedule: PropTypes.string.isRequired,
+// };
 
 export default Todo;

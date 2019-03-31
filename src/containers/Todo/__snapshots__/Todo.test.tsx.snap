@@ -37,8 +37,8 @@ ShallowWrapper {
         false,
       ],
       "className": "todo-container",
+      "onMouseEnter": [Function],
       "onMouseLeave": [Function],
-      "onMouseOver": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -119,8 +119,8 @@ ShallowWrapper {
           false,
         ],
         "className": "todo-container",
+        "onMouseEnter": [Function],
         "onMouseLeave": [Function],
-        "onMouseOver": [Function],
       },
       "ref": null,
       "rendered": Array [

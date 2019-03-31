@@ -48,6 +48,10 @@ export class Todos extends React.Component<ITodoAppState, ITodosState> {
     }
 }
 
+// Todos.propTypes = {
+//     todo: PropTypes.object
+// };
+
 const mapStateToProps = ({todo}: IAppState) => {
     const {labels, priorities, todos} = todo;
     return {

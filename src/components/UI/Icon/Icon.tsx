@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface IIcon {
     clicked?: () => void;
@@ -7,7 +8,9 @@ interface IIcon {
 
 const Icon = ({type, clicked}: IIcon) => {
     return (
-        <span className={`icon icon-${type}`} onClick={clicked}>{type}</span>
+        <span className={`icon icon-${type}`} onClick={clicked}>
+            <FontAwesomeIcon icon={['far','comment-dots']} />
+        </span>
     );
 }
 

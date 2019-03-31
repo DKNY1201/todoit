@@ -109,7 +109,7 @@ describe('<Todo /> events', () => {
 		const spy = jest.spyOn(wrapperInstance, 'toggleIsHover');
 		wrapperInstance.forceUpdate();
 		expect(spy).toHaveBeenCalledTimes(0);
-		wrapper.simulate('mouseover');
+		wrapper.simulate('mouseenter');
 		expect(spy).toHaveBeenCalledTimes(1);
 		expect(wrapperInstance.state.isHovering).toEqual(true);
 	});
