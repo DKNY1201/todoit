@@ -10,8 +10,13 @@ import Icon from './Icon';
 library.add(faCommentDots);
 
 describe('<Icons > render', () => {
-   it('should render a font awesome icon', () => {
+    it('should render a icon correctly', () => {
+        const wrapper = enzyme.shallow(<Icon type={IconType.Comment} version={IconVersion.Far} />);
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should render a font awesome icon', () => {
       const wrapper = enzyme.mount(<Icon type={IconType.Comment} version={IconVersion.Far} />);
       expect(wrapper.find('.fa-' + IconType.Comment).length).toEqual(1);
-   });
+    });
 });
