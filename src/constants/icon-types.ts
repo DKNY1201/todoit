@@ -1,18 +1,16 @@
+/*
+To see the association between IconType and IconVersion, check App.tsx
+ */
 export enum IconType {
-    Comment = {
-        name: 'comment-dots',
-        version: 'far'
-    },
-    DragDrop = {
-        name: 'comment-dots',
-        version: 'far'
-    },
-    Schedule = {
-        name: 'comment-dots',
-        version: 'far'
-    },
-    Action = {
-        name: 'ellipsis-h',
-        version: 'fas'
-    }
+    Comment = 'comment-dots',
+    DragDrop = 'grip-vertical',
+    Schedule = 'calendar-alt',
+    Action = 'ellipsis-h'
+}
+
+export enum IconVersion {
+    Fas = 'fas', // Font awesome solid
+    Far = 'far', // Font awesome regular
+    Fal = 'fal', // Font awesome light
+    Fab = 'fab' // Font awesome brands
 }

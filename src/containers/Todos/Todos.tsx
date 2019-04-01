@@ -32,7 +32,7 @@ export class Todos extends React.Component<ITodoAppState, ITodosState> {
         const todoItems = selectedLabel ? todos
             .filter(todo => !todo.isCompleted)
             .filter(todo => todo.labelId === selectedLabel.id)
-            .map(todo => <Todo key={todo.id} content={todo.content} completeTodo={this.completeTodoHandler} />) : null;
+            .map(todo => <Todo key={todo.id} schedule={todo.schedule} content={todo.content} completeTodo={this.completeTodoHandler} />) : null;
 
         return (
             <div className="todos-container">

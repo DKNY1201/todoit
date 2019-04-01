@@ -1,16 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
-import {IconType} from "../../../constants";
+import {IconType, IconVersion} from "../../../constants";
 
 interface IIcon {
     clicked?: () => void;
     type: IconType;
+    version: IconVersion
 }
 
-const Icon = ({type, clicked}: IIcon) => {
+const Icon = ({type, version, clicked}: IIcon) => {
     return (
-        <span className={`icon icon-${type}`} onClick={clicked}>
-            <FontAwesomeIcon icon={[type.version, type.name]} />
+        <span className={`icon icon-${version}-${type}`} onClick={clicked}>
+            <FontAwesomeIcon icon={[version, type]} />
         </span>
     );
 }

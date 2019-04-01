@@ -3,7 +3,7 @@ import * as React from 'react';
 import Checkbox from '../../components/UI/Checkbox/Checkbox';
 import Icon from '../../components/UI/Icon/Icon';
 import './Todo.css';
-import {IconType} from '../../constants';
+import {IconType, IconVersion} from '../../constants';
 
 export interface ITodoProp {
 	completeTodo: () => void;
@@ -26,18 +26,22 @@ class Todo extends React.Component<ITodoProp, ITodoState> {
 
 		return (
 			<div className="todo-container" onMouseEnter={this.toggleIsHover} onMouseLeave={this.toggleIsHover}>
-				{ isHovering && <Icon type={IconType.DragDrop} /> }
+				{ isHovering && <Icon type={IconType.DragDrop} version={IconVersion.Fas} /> }
 				<div className="todo-central">
 					<Checkbox clicked={completeTodo} />
 					<span className="todo-content">{content}</span>
-					{ isHovering && <Icon type={IconType.Comment} clicked={this.showCommentModal} /> }
+					{ isHovering && <Icon type={IconType.Comment} version={IconVersion.Far} clicked={this.showCommentModal} /> }
 					{
 						!(!schedule && !isHovering) && <div className="todo-schedule">
-							{ schedule ? schedule : isHovering ? <Icon type={IconType.Schedule} clicked={this.showScheduleModal} /> : ''}
+							{ schedule
+								? schedule
+								: isHovering
+									? <Icon type={IconType.Schedule} version={IconVersion.Far} clicked={this.showScheduleModal} />
+									: ''}
 						</div>
 					}
 				</div>
-				{ isHovering && <Icon type={IconType.Action} clicked={this.showActionModal} /> }
+				{ isHovering && <Icon type={IconType.Action} version={IconVersion.Fas} clicked={this.showActionModal} /> }
 			</div>
 		);
 	}

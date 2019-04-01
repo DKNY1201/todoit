@@ -113,10 +113,12 @@ ShallowWrapper {
           <Todo
             completeTodo={[Function]}
             content={undefined}
+            schedule={undefined}
 />,
           <Todo
             completeTodo={[Function]}
             content={undefined}
+            schedule={undefined}
 />,
         ],
         <AddTodo />,
@@ -144,6 +146,7 @@ ShallowWrapper {
         "props": Object {
           "completeTodo": [Function],
           "content": undefined,
+          "schedule": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -156,6 +159,7 @@ ShallowWrapper {
         "props": Object {
           "completeTodo": [Function],
           "content": undefined,
+          "schedule": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -189,10 +193,12 @@ ShallowWrapper {
             <Todo
               completeTodo={[Function]}
               content={undefined}
+              schedule={undefined}
 />,
             <Todo
               completeTodo={[Function]}
               content={undefined}
+              schedule={undefined}
 />,
           ],
           <AddTodo />,
@@ -220,6 +226,7 @@ ShallowWrapper {
           "props": Object {
             "completeTodo": [Function],
             "content": undefined,
+            "schedule": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -232,6 +239,7 @@ ShallowWrapper {
           "props": Object {
             "completeTodo": [Function],
             "content": undefined,
+            "schedule": undefined,
           },
           "ref": null,
           "rendered": null,

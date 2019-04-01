@@ -6,7 +6,7 @@ const initState: ITodoAppState = {
         {
             id: 1,
             content: 'Buy Skateboard',
-            time: '03/20/2019',
+            schedule: '03/20/2019',
             labelId: 1,
             priorityId: 2,
             parentTodoId: undefined,
@@ -15,7 +15,7 @@ const initState: ITodoAppState = {
         {
             id: 2,
             content: 'Buy more Skateboard',
-            time: '03/20/2019',
+            schedule: '03/20/2019',
             labelId: 1,
             priorityId: 2,
             parentTodoId: undefined,

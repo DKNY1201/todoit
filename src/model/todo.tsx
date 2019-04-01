@@ -1,7 +1,7 @@
 export interface ITodo {
     id: number;
     content: string;
-    time: string;
+    schedule: string;
     labelId: number;
     priorityId: number;
     userId?: number;
