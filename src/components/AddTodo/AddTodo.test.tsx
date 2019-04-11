@@ -79,7 +79,7 @@ describe('<AddTodo > render', () => {
         expect(wrapperInstance.state.isAdding).toEqual(false);
     });
 
-    it('shouldn\'t change isAdding to false when click on Add Todo button and has no content', () => {
+    it('should call addTodo() and not change isAdding to false when click on Add Todo button but no content', () => {
         const spy = jest.spyOn(wrapperInstance, 'addTodo');
         wrapperInstance.forceUpdate();
         expect(spy).toHaveBeenCalledTimes(0);
@@ -110,6 +110,26 @@ describe('<AddTodo > render', () => {
         expect(spy).toHaveBeenCalledTimes(0);
         wrapper.find('.add-todo-priority').simulate('click');
         expect(spy).toHaveBeenCalledTimes(1);
+    });
+
+    it('should update \'content\' when input is changing', () => {
+
+    });
+
+    it('should update \'schedule\' when select a schedule item', () => {
+
+    });
+
+    it('should update \'labelId\' when selecting a label', () => {
+
+    });
+
+    it('should update \'priorityId\' when priority is changing', () => {
+
+    });
+
+    it('should update \'parentTodoId\' when a Todo is indenting', () => {
+
     });
 });
 

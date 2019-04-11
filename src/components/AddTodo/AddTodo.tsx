@@ -24,7 +24,6 @@ interface IAddTodoProps {
 const DEFAULT_PRIORITY = 4;
 
 class AddTodo extends React.Component<IAddTodoProps, IAddTodoState> {
-
     state = {
         isAdding: false,
         content: '',
@@ -34,24 +33,20 @@ class AddTodo extends React.Component<IAddTodoProps, IAddTodoState> {
         parentTodoId: undefined,
     }
 
-    componentDidMount() {
+    public componentDidMount() {
         this.setState({
             labelId: this.props.labelId
         });
     }
 
-    // Todo:
-    // - Button
-    // - Input
-
-    render() {
+    public render() {
         const {isAdding} = this.state;
 
         const addTodoContent = isAdding
             ? (
                 <div className="add-todo-form">
                     <div className="add-todo-form-top">
-                        <Input placeholder="Enter todo" />
+                        <Input placeholder="Enter todo" changed={this.todoChangedHandler} />
                         <div className="add-todo-schedule" onClick={this.showScheduleModal}>schedule</div>
                     </div>
                     <div className="add-todo-form-bottom">
@@ -79,6 +74,10 @@ class AddTodo extends React.Component<IAddTodoProps, IAddTodoState> {
         );
     }
 
+    private todoChangedHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        this.setState({content: e.target.value});
+    }
+
     private triggerAdding = () => {
         this.setState({
             isAdding: true
@@ -98,7 +97,6 @@ class AddTodo extends React.Component<IAddTodoProps, IAddTodoState> {
     }
 
     private addTodo = () => {
-        console.log('addTodoHandler');
         const {content, schedule, labelId, priorityId, parentTodoId} = this.state;
         const newTodo: ITodo = {
             content,

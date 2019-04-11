@@ -3,7 +3,7 @@ import * as React from 'react';
 interface IInput {
     placeholder: string;
     value?: string;
-    changed?: () => void;
+    changed?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Input = ({placeholder, value, changed}: IInput) => (
