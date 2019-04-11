@@ -17,6 +17,7 @@ describe('<Icons > render', () => {
 
     it('should render a font awesome icon', () => {
       const wrapper = enzyme.mount(<Icon type={IconType.Comment} version={IconVersion.Far} />);
-      expect(wrapper.find('.fa-' + IconType.Comment).length).toEqual(1);
+      // Mock Font Awesome. https://www.npmjs.com/package/@fortawesome/react-fontawesome#unit-testing
+      expect(wrapper.find('.fa').length).toEqual(1);
     });
 });

@@ -38,13 +38,17 @@ export class Todos extends React.Component<ITodoAppState, ITodosState> {
             <div className="todos-container">
                 <h1 className="label-title">{labelTitle}</h1>
                 {todoItems}
-                <AddTodo />
+                <AddTodo labelId={selectedLabel ? selectedLabel.id : -1} addTodo={this.addTodoHandler} />
             </div>
         )
     }
 
     private completeTodoHandler = () => {
         console.log('completeTodoHandler');
+    }
+
+    private addTodoHandler = () => {
+        console.log('addTodoHandler');
     }
 }
 

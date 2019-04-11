@@ -61,7 +61,7 @@ class Todo extends React.Component<ITodoProp, ITodoState> {
 	private toggleIsHover = () => {
 		this.setState((prevState) => {
 			return {
-				isHovering:!prevState.isHovering
+				isHovering: !prevState.isHovering
 			}
 		})
 	}

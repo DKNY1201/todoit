@@ -121,7 +121,10 @@ ShallowWrapper {
             schedule={undefined}
 />,
         ],
-        <AddTodo />,
+        <AddTodo
+          addTodo={[Function]}
+          labelId={2}
+/>,
       ],
       "className": "todos-container",
     },
@@ -168,8 +171,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
+        "nodeType": "class",
+        "props": Object {
+          "addTodo": [Function],
+          "labelId": 2,
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -201,7 +207,10 @@ ShallowWrapper {
               schedule={undefined}
 />,
           ],
-          <AddTodo />,
+          <AddTodo
+            addTodo={[Function]}
+            labelId={2}
+/>,
         ],
         "className": "todos-container",
       },
@@ -248,8 +257,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
+          "nodeType": "class",
+          "props": Object {
+            "addTodo": [Function],
+            "labelId": 2,
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

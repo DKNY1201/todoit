@@ -1,10 +1,10 @@
 export interface ITodo {
-    id: number;
+    id?: number;
     content: string;
-    schedule: string;
+    schedule?: string;
     labelId: number;
     priorityId: number;
     userId?: number;
     parentTodoId?: number;
-    isCompleted: boolean;
+    isCompleted?: boolean;
 }
