@@ -74,8 +74,8 @@ class AddTodo extends React.Component<IAddTodoProps, IAddTodoState> {
         );
     }
 
-    private todoChangedHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        this.setState({content: e.target.value});
+    private todoChangedHandler = ({target}: React.ChangeEvent<HTMLInputElement>) => {
+        this.setState({content: target.value});
     }
 
     private triggerAdding = () => {

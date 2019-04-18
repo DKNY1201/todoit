@@ -112,24 +112,26 @@ describe('<AddTodo > render', () => {
         expect(spy).toHaveBeenCalledTimes(1);
     });
 
-    it('should update \'content\' when input is changing', () => {
-
+    it('should update \'content\' state when input is changing', () => {
+        const mockEvent = {target: {value: 'a todo'}};
+        wrapperInstance.todoChangedHandler(mockEvent);
+        expect(wrapperInstance.state.content).toEqual(mockEvent.target.value);
     });
 
-    it('should update \'schedule\' when select a schedule item', () => {
-
-    });
-
-    it('should update \'labelId\' when selecting a label', () => {
-
-    });
-
-    it('should update \'priorityId\' when priority is changing', () => {
-
-    });
-
-    it('should update \'parentTodoId\' when a Todo is indenting', () => {
-
-    });
+    // it('should update \'schedule\' when select a schedule item', () => {
+    //
+    // });
+    //
+    // it('should update \'labelId\' when selecting a label', () => {
+    //
+    // });
+    //
+    // it('should update \'priorityId\' when priority is changing', () => {
+    //
+    // });
+    //
+    // it('should update \'parentTodoId\' when a Todo is indenting', () => {
+    //
+    // });
 });
 
