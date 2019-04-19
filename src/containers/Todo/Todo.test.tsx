@@ -3,7 +3,6 @@ import * as React from 'react';
 
 import Checkbox from '../../components/UI/Checkbox/Checkbox';
 import Todo from './Todo';
-import {IconType, IconVersion} from "../../constants";
 
 describe('<Todo /> rendering', () => {
 	let wrapper;
@@ -83,11 +82,12 @@ describe('<Todo /> rendering', () => {
 	});
 
 	it('should render a Calendar in Schedule area when schedule is not set and is hovering', () => {
+		wrapper = enzyme.mount<Todo>(<Todo content={content} />);
 		const schedule = null;
 		const isHovering = true;
 		wrapper.setProps({schedule});
 		wrapper.setState({isHovering});
-		expect(wrapper.find('.todo-schedule').find(`Icon[type="${IconType.Schedule}"]`).length).toEqual(1);
+		expect(wrapper.find('.todo-schedule').find('Icon').find('.icon-far-calendar-alt').length).toEqual(1);
 	});
 
 	it('shouldn\'t be hovered at beginning', () => {
@@ -140,7 +140,7 @@ describe('<Todo /> events', () => {
 		const spy = jest.spyOn(wrapperInstance, 'showCommentModal');
 		wrapperInstance.forceUpdate();
 		expect(spy).toHaveBeenCalledTimes(0);
-		wrapper.find('.icon-' + IconVersion.Far + '-' + IconType.Comment).simulate('click');
+		wrapper.find('.icon-far-comment-dots').simulate('click');
 		expect(spy).toHaveBeenCalledTimes(1);
 	});
 
@@ -150,7 +150,7 @@ describe('<Todo /> events', () => {
 		const spy = jest.spyOn(wrapperInstance, 'showScheduleModal');
 		wrapperInstance.forceUpdate();
 		expect(spy).toHaveBeenCalledTimes(0);
-		wrapper.find('.icon-' + IconVersion.Far + '-' + IconType.Schedule).simulate('click');
+		wrapper.find('.icon-far-calendar-alt').simulate('click');
 		expect(spy).toHaveBeenCalledTimes(1);
 	});
 
@@ -160,7 +160,7 @@ describe('<Todo /> events', () => {
 		const spy = jest.spyOn(wrapperInstance, 'showActionModal');
 		wrapperInstance.forceUpdate();
 		expect(spy).toHaveBeenCalledTimes(0);
-		wrapper.find('.icon-' + IconVersion.Fas + '-' + IconType.Action).simulate('click');
+		wrapper.find('.icon-ellipsis-h').simulate('click');
 		expect(spy).toHaveBeenCalledTimes(1);
 	});
 });

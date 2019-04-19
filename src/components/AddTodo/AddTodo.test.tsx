@@ -108,7 +108,7 @@ describe('<AddTodo > render', () => {
         const spy = jest.spyOn(wrapperInstance, 'showPriorityModal');
         wrapperInstance.forceUpdate();
         expect(spy).toHaveBeenCalledTimes(0);
-        wrapper.find('.add-todo-priority').simulate('click');
+        wrapper.find('Icon[name="tag"]').find('.icon-tag').simulate('click');
         expect(spy).toHaveBeenCalledTimes(1);
     });
 
@@ -118,6 +118,7 @@ describe('<AddTodo > render', () => {
         expect(wrapperInstance.state.content).toEqual(mockEvent.target.value);
     });
 
+    // Todo: implement following unit test
     // it('should update \'schedule\' when select a schedule item', () => {
     //
     // });

@@ -11,12 +11,12 @@ library.add(faCommentDots);
 
 describe('<Icons > render', () => {
     it('should render a icon correctly', () => {
-        const wrapper = enzyme.shallow(<Icon type={IconType.Comment} version={IconVersion.Far} />);
+        const wrapper = enzyme.shallow(<Icon name={["far", "comment-dots"]} />);
         expect(wrapper).toMatchSnapshot();
     });
 
     it('should render a font awesome icon', () => {
-      const wrapper = enzyme.mount(<Icon type={IconType.Comment} version={IconVersion.Far} />);
+      const wrapper = enzyme.mount(<Icon name={["far", "comment-dots"]} />);
       // Mock Font Awesome. https://www.npmjs.com/package/@fortawesome/react-fontawesome#unit-testing
       expect(wrapper.find('.fa').length).toEqual(1);
     });

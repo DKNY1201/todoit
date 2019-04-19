@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import {IconType, IconVersion} from '../../constants';
 import Button from "../UI/Button/Button";
 import Input from "../UI/Input/Input";
 import './AddTodo.css';
@@ -55,8 +54,8 @@ class AddTodo extends React.Component<IAddTodoProps, IAddTodoState> {
                             <Button label="Cancel" clicked={this.cancelAddTodo}/>
                         </div>
                         <div className="add-todo-form-bottom-right">
-                            <Icon type={IconType.Action} version={IconVersion.Fas} clicked={this.showLabelModal} />
-                            <Icon type={IconType.Action} version={IconVersion.Fas} clicked={this.showPriorityModal} />
+                            <Icon name="tag" clicked={this.showLabelModal} />
+                            <Icon name={["far", "flag"]} clicked={this.showPriorityModal} />
                         </div>
                     </div>
                 </div>
