@@ -50,8 +50,8 @@ class AddTodo extends React.Component<IAddTodoProps, IAddTodoState> {
                     </div>
                     <div className="add-todo-form-bottom">
                         <div className="add-todo-form-bottom-left">
-                            <Button label="Add Todo" style="highlight" clicked={this.addTodo} />
-                            <Button label="Cancel" clicked={this.cancelAddTodo}/>
+                            <Button id="add-todo-btn" label="Add Todo" style="highlight" clicked={this.addTodo} />
+                            <Button id="cancel-todo-btn" label="Cancel" clicked={this.cancelAddTodo}/>
                         </div>
                         <div className="add-todo-form-bottom-right">
                             <Icon name="tag" clicked={this.showLabelModal} />

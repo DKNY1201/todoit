@@ -7,7 +7,7 @@ describe('<Button />', () => {
     let wrapper;
 
     beforeEach(() => {
-        wrapper = enzyme.shallow(<Button label="Add Todo" style="highlight"/>);
+        wrapper = enzyme.shallow(<Button label="Add Todo" style="highlight" id="add-todo-btn"/>);
     });
 
     it('should render a icon correctly', () => {
@@ -20,6 +20,10 @@ describe('<Button />', () => {
 
     it('should have corresponding class with provided style', () => {
         expect(wrapper.hasClass('highlight')).toEqual(true);
+    });
+
+    it('should have corresponding id with provided id', () => {
+        expect(wrapper.hasAttribute('id')).toEqual("add-todo-btn");
     });
 
     it('should call provided function when click', () => {

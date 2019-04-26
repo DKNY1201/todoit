@@ -80,15 +80,19 @@ describe('<AddTodo > render', () => {
     });
 
     it('should call addTodo() and not change isAdding to false when click on Add Todo button but no content', () => {
+        const isAdding = true;
+        wrapper.setState({isAdding, content: ''});
         const spy = jest.spyOn(wrapperInstance, 'addTodo');
         wrapperInstance.forceUpdate();
         expect(spy).toHaveBeenCalledTimes(0);
-        wrapper.find('.add-todo-button').simulate('click');
+        wrapper.find('.add-todo-btn').simulate('click');
         expect(spy).toHaveBeenCalledTimes(1);
         expect(wrapperInstance.state.isAdding).toEqual(true);
     });
 
     it('should call showScheduleModal() when click on Schedule area', () => {
+        const isAdding = true;
+        wrapper.setState({isAdding});
         const spy = jest.spyOn(wrapperInstance, 'showScheduleModal');
         wrapperInstance.forceUpdate();
         expect(spy).toHaveBeenCalledTimes(0);
@@ -97,18 +101,22 @@ describe('<AddTodo > render', () => {
     });
 
     it('should call showLabelModal() when click on Label icon', () => {
+        const isAdding = true;
+        wrapper.setState({isAdding});
         const spy = jest.spyOn(wrapperInstance, 'showLabelModal');
         wrapperInstance.forceUpdate();
         expect(spy).toHaveBeenCalledTimes(0);
-        wrapper.find('.add-todo-label').simulate('click');
+        wrapper.find('.icon-tag').simulate('click');
         expect(spy).toHaveBeenCalledTimes(1);
     });
 
     it('should call showPriorityModal() when click on Priority icon', () => {
+        const isAdding = true;
+        wrapper.setState({isAdding});
         const spy = jest.spyOn(wrapperInstance, 'showPriorityModal');
         wrapperInstance.forceUpdate();
         expect(spy).toHaveBeenCalledTimes(0);
-        wrapper.find('Icon[name="tag"]').find('.icon-tag').simulate('click');
+        wrapper.find('.icon-far-flag').simulate('click');
         expect(spy).toHaveBeenCalledTimes(1);
     });
 

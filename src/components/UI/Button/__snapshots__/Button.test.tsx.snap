@@ -4,6 +4,7 @@ exports[`<Button /> should render a icon correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Button
+    id="add-todo-btn"
     label="Add Todo"
     style="highlight"
 />,
@@ -27,6 +28,7 @@ ShallowWrapper {
         Add Todo
 </button>,
       "className": "button-container highlight",
+      "id": "add-todo-btn",
     },
     "ref": null,
     "rendered": Object {
@@ -55,6 +57,7 @@ ShallowWrapper {
           Add Todo
 </button>,
         "className": "button-container highlight",
+        "id": "add-todo-btn",
       },
       "ref": null,
       "rendered": Object {

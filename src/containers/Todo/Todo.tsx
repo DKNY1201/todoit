@@ -24,9 +24,6 @@ class Todo extends React.Component<ITodoProp, ITodoState> {
 		const {completeTodo, content, schedule} = this.props;
 
 		return (
-			<>
-			<Icon name={["far", "calendar-alt"]} clicked={this.showScheduleModal} />
-			<Icon name="ellipsis-h" clicked={this.showActionModal} />
 			<div className="todo-container" onMouseEnter={this.toggleIsHover} onMouseLeave={this.toggleIsHover}>
 				{ isHovering && <Icon name="grip-vertical" /> }
 				<div className="todo-central">
@@ -45,7 +42,6 @@ class Todo extends React.Component<ITodoProp, ITodoState> {
 				</div>
 				{ isHovering && <Icon name="ellipsis-h" clicked={this.showActionModal} /> }
 			</div>
-			</>
 		);
 	}
 

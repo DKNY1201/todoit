@@ -18,307 +18,165 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Icon
-          clicked={[Function]}
-          name={
-                    Array [
-                              "far",
-                              "calendar-alt",
-                            ]
-          }
-/>,
-        <Icon
-          clicked={[Function]}
-          name="ellipsis-h"
-/>,
+        false,
         <div
-          className="todo-container"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+          className="todo-central"
 >
-          <div
-                    className="todo-central"
+          <Checkbox
+                    clicked={undefined}
+          />
+          <span
+                    className="todo-content"
           >
-                    <Checkbox
-                              clicked={undefined}
-                    />
-                    <span
-                              className="todo-content"
-                    >
-                              Default content
-                    </span>
-          </div>
+                    Default content
+          </span>
 </div>,
+        false,
       ],
+      "className": "todo-container",
+      "onMouseEnter": [Function],
+      "onMouseLeave": [Function],
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "clicked": [Function],
-          "name": Array [
-            "far",
-            "calendar-alt",
-          ],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "clicked": [Function],
-          "name": "ellipsis-h",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+      false,
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            false,
-            <div
-              className="todo-central"
+            <Checkbox
+              clicked={undefined}
+/>,
+            <span
+              className="todo-content"
 >
-              <Checkbox
-                            clicked={undefined}
-              />
-              <span
-                            className="todo-content"
-              >
-                            Default content
-              </span>
-</div>,
+              Default content
+</span>,
+            false,
             false,
           ],
-          "className": "todo-container",
-          "onMouseEnter": [Function],
-          "onMouseLeave": [Function],
+          "className": "todo-central",
         },
         "ref": null,
         "rendered": Array [
-          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "clicked": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <Checkbox
-                  clicked={undefined}
-/>,
-                <span
-                  className="todo-content"
->
-                  Default content
-</span>,
-                false,
-                false,
-              ],
-              "className": "todo-central",
+              "children": "Default content",
+              "className": "todo-content",
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "clicked": undefined,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Default content",
-                  "className": "todo-content",
-                },
-                "ref": null,
-                "rendered": "Default content",
-                "type": "span",
-              },
-              false,
-              false,
-            ],
-            "type": "div",
+            "rendered": "Default content",
+            "type": "span",
           },
+          false,
           false,
         ],
         "type": "div",
       },
+      false,
     ],
-    "type": Symbol(react.fragment),
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Icon
-            clicked={[Function]}
-            name={
-                        Array [
-                                    "far",
-                                    "calendar-alt",
-                                  ]
-            }
-/>,
-          <Icon
-            clicked={[Function]}
-            name="ellipsis-h"
-/>,
+          false,
           <div
-            className="todo-container"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+            className="todo-central"
 >
-            <div
-                        className="todo-central"
+            <Checkbox
+                        clicked={undefined}
+            />
+            <span
+                        className="todo-content"
             >
-                        <Checkbox
-                                    clicked={undefined}
-                        />
-                        <span
-                                    className="todo-content"
-                        >
-                                    Default content
-                        </span>
-            </div>
+                        Default content
+            </span>
 </div>,
+          false,
         ],
+        "className": "todo-container",
+        "onMouseEnter": [Function],
+        "onMouseLeave": [Function],
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "clicked": [Function],
-            "name": Array [
-              "far",
-              "calendar-alt",
-            ],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "clicked": [Function],
-            "name": "ellipsis-h",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+        false,
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              false,
-              <div
-                className="todo-central"
+              <Checkbox
+                clicked={undefined}
+/>,
+              <span
+                className="todo-content"
 >
-                <Checkbox
-                                clicked={undefined}
-                />
-                <span
-                                className="todo-content"
-                >
-                                Default content
-                </span>
-</div>,
+                Default content
+</span>,
+              false,
               false,
             ],
-            "className": "todo-container",
-            "onMouseEnter": [Function],
-            "onMouseLeave": [Function],
+            "className": "todo-central",
           },
           "ref": null,
           "rendered": Array [
-            false,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "clicked": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  <Checkbox
-                    clicked={undefined}
-/>,
-                  <span
-                    className="todo-content"
->
-                    Default content
-</span>,
-                  false,
-                  false,
-                ],
-                "className": "todo-central",
+                "children": "Default content",
+                "className": "todo-content",
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "clicked": undefined,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Default content",
-                    "className": "todo-content",
-                  },
-                  "ref": null,
-                  "rendered": "Default content",
-                  "type": "span",
-                },
-                false,
-                false,
-              ],
-              "type": "div",
+              "rendered": "Default content",
+              "type": "span",
             },
+            false,
             false,
           ],
           "type": "div",
         },
+        false,
       ],
-      "type": Symbol(react.fragment),
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
